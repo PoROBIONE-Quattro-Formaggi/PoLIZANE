@@ -9,13 +9,13 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from addList_window import Ui_add_list_window
+from addIngredient_window import Ui_AddIngredientWindow
 
 
 class Ui_add_list_window(object):
-    def open_lists(self):
+    def open_add_ingredient(self):
         self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_add_list_window()
+        self.ui = Ui_AddIngredientWindow()
         self.ui.setupUi(self.window)
         self.window.show()
 
@@ -73,7 +73,7 @@ class Ui_add_list_window(object):
 "};\n"
 " font-size: 24px;")
         self.list_name.setObjectName("list_name")
-        self.add_button = QtWidgets.QPushButton(self.add_list_screen)
+        self.add_button = QtWidgets.QPushButton(self.add_list_screen, clicked = lambda: self.open_add_ingredient())
         self.add_button.setGeometry(QtCore.QRect(300, 200, 300, 90))
         font = QtGui.QFont()
         font.setFamily("Verdana")

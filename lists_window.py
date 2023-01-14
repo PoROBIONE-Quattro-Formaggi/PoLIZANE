@@ -9,9 +9,16 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from addList_window import Ui_add_list_window
 
 
 class Ui_lists_window(object):
+    def open_add_list(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_add_list_window()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
     def setupUi(self, lists_window):
         lists_window.setObjectName("lists_window")
         lists_window.resize(1200, 800)
@@ -31,7 +38,7 @@ class Ui_lists_window(object):
         lists_window.setTabShape(QtWidgets.QTabWidget.Rounded)
         self.recpie_screen = QtWidgets.QWidget(lists_window)
         self.recpie_screen.setObjectName("recpie_screen")
-        self.add_button = QtWidgets.QPushButton(self.recpie_screen)
+        self.add_button = QtWidgets.QPushButton(self.recpie_screen, clicked = lambda: self.open_add_list())
         self.add_button.setGeometry(QtCore.QRect(30, 20, 1150, 80))
         font = QtGui.QFont()
         font.setFamily("Verdana")
