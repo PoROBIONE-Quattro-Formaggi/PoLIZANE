@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>add_recipe_window</class>
+ <widget class="QMainWindow" name="add_recipe_window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PoLIZANE - Add recipe</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>PoLIZANE.png</normaloff>PoLIZANE.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: white;</string>
+  </property>
+  <widget class="QWidget" name="add_recipe_screen">
+   <widget class="QLabel" name="add_recipe_label">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>40</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Verdana</family>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="statusTip">
+     <string>Add recipe</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(49, 87, 44);</string>
+    </property>
+    <property name="text">
+     <string>Add recipe</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="list_name">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>110</y>
+      <width>520</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="statusTip">
+     <string>Type recipe name here</string>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-style: solid;
+border-width: 2px;
+border-radius: 12px;
+border-color: rgb(49, 87, 44);
+placeholder {
+  color: rgb(49, 87, 44, 75);
+};
+ font-size: 24px;</string>
+    </property>
+    <property name="placeholderText">
+     <string>Recipe name</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="add_button_step">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>220</y>
+      <width>300</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Verdana</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="statusTip">
+     <string>Click plus to add new step to the recipe</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white;
+color:  rgb(49, 87, 44);
+border-radius: 12px;
+border: solid;
+border-color:  rgb(49, 87, 44);
+border-width: 2px;</string>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="add_photo">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>20</y>
+      <width>520</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="statusTip">
+     <string>Add photo here</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-style: solid;
+border-width: 4px;
+border-radius: 12px;
+border-color: rgb(49, 87, 44);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>no_image.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="steps_label">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>260</y>
+      <width>260</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Verdana</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="statusTip">
+     <string>Steps</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(49, 87, 44);</string>
+    </property>
+    <property name="text">
+     <string>Steps:</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="steps_list">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>330</y>
+      <width>1060</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <property name="statusTip">
+     <string>Added steps list</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-style: solid;
+border-width: 2px;
+border-radius: 12px;
+border-color: rgb(49, 87, 44);</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ingredients_label">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>580</y>
+      <width>260</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Verdana</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="statusTip">
+     <string>Ingredients</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(49, 87, 44);</string>
+    </property>
+    <property name="text">
+     <string>Ingredients:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="timers_label">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>580</y>
+      <width>260</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Verdana</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="statusTip">
+     <string>Timers</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(49, 87, 44);</string>
+    </property>
+    <property name="text">
+     <string>Timers:</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="ingredients_list">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>660</y>
+      <width>520</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <property name="statusTip">
+     <string>Added ingredienst list</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-style: solid;
+border-width: 2px;
+border-radius: 12px;
+border-color: rgb(49, 87, 44);</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="timers_list">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>660</y>
+      <width>520</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <property name="statusTip">
+     <string>Added timers list</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-style: solid;
+border-width: 2px;
+border-radius: 12px;
+border-color: rgb(49, 87, 44);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="add_button_ingredient">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>550</y>
+      <width>300</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Verdana</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="statusTip">
+     <string>Click plus to add new ingredient to the recipe</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white;
+color:  rgb(49, 87, 44);
+border-radius: 12px;
+border: solid;
+border-color:  rgb(49, 87, 44);
+border-width: 2px;</string>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="add_button_timer">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>550</y>
+      <width>300</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Verdana</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="statusTip">
+     <string>Click plus to add new timer to the recipe</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white;
+color:  rgb(49, 87, 44);
+border-radius: 12px;
+border: solid;
+border-color:  rgb(49, 87, 44);
+border-width: 2px;</string>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="save_button">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>870</y>
+      <width>250</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Verdana</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="statusTip">
+     <string>Click save the recipe</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(49, 87, 44);
+color: white;
+border-radius: 12px;</string>
+    </property>
+    <property name="text">
+     <string>Save</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="delete_button">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>870</y>
+      <width>250</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Verdana</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="statusTip">
+     <string>Click delete if you don't want to create this recipe</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(49, 87, 44);
+color: white;
+border-radius: 12px;</string>
+    </property>
+    <property name="text">
+     <string>Delete</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
