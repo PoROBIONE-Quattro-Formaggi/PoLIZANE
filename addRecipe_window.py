@@ -9,9 +9,30 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from addStep_window import Ui_MainWindow
+from addIngredient_window import Ui_AddIngredientWindow
+from addTimer_window import Ui_AddTimerWindow
 
 
 class Ui_add_recipe_window(object):
+    def open_add_step(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
+    def open_add_ingredient(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_AddIngredientWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
+    def open_add_timer(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_AddTimerWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
     def setupUi(self, add_recipe_window):
         add_recipe_window.setObjectName("add_recipe_window")
         add_recipe_window.resize(1200, 1000)
@@ -43,7 +64,7 @@ class Ui_add_recipe_window(object):
 "};\n"
 " font-size: 24px;")
         self.list_name.setObjectName("list_name")
-        self.add_button_step = QtWidgets.QPushButton(self.add_recipe_screen)
+        self.add_button_step = QtWidgets.QPushButton(self.add_recipe_screen, clicked = lambda: self.open_add_step())
         self.add_button_step.setGeometry(QtCore.QRect(830, 220, 300, 90))
         font = QtGui.QFont()
         font.setFamily("Verdana")
@@ -111,7 +132,7 @@ class Ui_add_recipe_window(object):
 "border-radius: 12px;\n"
 "border-color: rgb(49, 87, 44);")
         self.timers_list.setObjectName("timers_list")
-        self.add_button_ingredient = QtWidgets.QPushButton(self.add_recipe_screen)
+        self.add_button_ingredient = QtWidgets.QPushButton(self.add_recipe_screen, clicked = lambda: self.open_add_ingredient())
         self.add_button_ingredient.setGeometry(QtCore.QRect(290, 550, 300, 90))
         font = QtGui.QFont()
         font.setFamily("Verdana")
@@ -124,7 +145,7 @@ class Ui_add_recipe_window(object):
 "border-color:  rgb(49, 87, 44);\n"
 "border-width: 2px;")
         self.add_button_ingredient.setObjectName("add_button_ingredient")
-        self.add_button_timer = QtWidgets.QPushButton(self.add_recipe_screen)
+        self.add_button_timer = QtWidgets.QPushButton(self.add_recipe_screen, clicked = lambda: self.open_add_timer())
         self.add_button_timer.setGeometry(QtCore.QRect(830, 550, 300, 90))
         font = QtGui.QFont()
         font.setFamily("Verdana")
