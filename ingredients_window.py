@@ -13,7 +13,7 @@ from addIngredient_window import Ui_AddIngredientWindow
 
 
 class Ui_ingredients_window(object):
-    def open_lists(self):
+    def open_add_ingredient(self):
         self.window = QtWidgets.QMainWindow()
         self.ui = Ui_AddIngredientWindow()
         self.ui.setupUi(self.window)
@@ -38,7 +38,7 @@ class Ui_ingredients_window(object):
         ingredients_window.setTabShape(QtWidgets.QTabWidget.Rounded)
         self.ingredients_screen = QtWidgets.QWidget(ingredients_window)
         self.ingredients_screen.setObjectName("ingredients_screen")
-        self.add_button = QtWidgets.QPushButton(self.ingredients_screen)
+        self.add_button = QtWidgets.QPushButton(self.ingredients_screen, clicked = lambda: self.open_add_ingredient())
         self.add_button.setGeometry(QtCore.QRect(30, 20, 1150, 80))
         font = QtGui.QFont()
         font.setFamily("Verdana")

@@ -11,6 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from lists_window import Ui_lists_window
 from ingredients_window import Ui_ingredients_window
+from addRecipe_window import Ui_add_recipe_window
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QLabel, QVBoxLayout, QWidget
 
 
@@ -27,6 +28,12 @@ class Ui_recpie_window(object):
         self.ui.setupUi(self.window)
         self.window.show()
 
+    def open_add_recipe(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_add_recipe_window()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
     def setupUi(self, recpie_window):
         recpie_window.setObjectName("recpie_window")
         recpie_window.resize(1200, 800)
@@ -40,7 +47,7 @@ class Ui_recpie_window(object):
 "color: rgb(255, 255, 255);")
         self.recpie_screen = QtWidgets.QWidget(recpie_window)
         self.recpie_screen.setObjectName("recpie_screen")
-        self.add_button = QtWidgets.QPushButton(self.recpie_screen)
+        self.add_button = QtWidgets.QPushButton(self.recpie_screen, clicked = lambda: self.open_add_recipe())
         self.add_button.setGeometry(QtCore.QRect(30, 20, 300, 80))
         font = QtGui.QFont()
         font.setFamily("Verdana")
