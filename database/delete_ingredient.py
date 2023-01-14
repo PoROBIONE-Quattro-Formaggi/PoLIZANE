@@ -1,4 +1,4 @@
-from database_test import Session, engine, Ingredient
+from database_init import Session, engine, Ingredient
 
 local_session = Session(bind=engine)
 
