@@ -9,9 +9,16 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from addIngredient_window import Ui_AddIngredientWindow
 
 
 class Ui_ingredients_window(object):
+    def open_lists(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_AddIngredientWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
     def setupUi(self, ingredients_window):
         ingredients_window.setObjectName("ingredients_window")
         ingredients_window.resize(1200, 800)
