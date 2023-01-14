@@ -9,9 +9,16 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from addList_window import Ui_add_list_window
 
 
 class Ui_add_list_window(object):
+    def open_lists(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_add_list_window()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
     def setupUi(self, add_list_window):
         add_list_window.setObjectName("add_list_window")
         add_list_window.resize(900, 800)

@@ -13,6 +13,8 @@ class Ui_add_recipe_window(object):
     def setupUi(self, add_recipe_window):
         add_recipe_window.setObjectName("add_recipe_window")
         add_recipe_window.resize(1200, 1000)
+        add_recipe_window.setMinimumSize(QtCore.QSize(1200, 1000))
+        add_recipe_window.setMaximumSize(QtCore.QSize(1200, 1000))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("c:\\Users\\weraj\\OneDrive\\Pulpit\\ACS\\SEM_V\\Software Engineering\\PoLIZANE\\UI\\PoLIZANE.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         add_recipe_window.setWindowIcon(icon)

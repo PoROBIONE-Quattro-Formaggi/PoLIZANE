@@ -12,6 +12,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_ViewRecipeWindow(object):
+
     def setupUi(self, ViewRecipeWindow):
         ViewRecipeWindow.setObjectName("ViewRecipeWindow")
         ViewRecipeWindow.resize(1200, 900)
@@ -80,7 +81,8 @@ class Ui_ViewRecipeWindow(object):
         self.listOfSteps.setGeometry(QtCore.QRect(70, 330, 1050, 260))
         self.listOfSteps.setStyleSheet("border-color: rgb(49, 87, 44);\n"
 "border-width: 2px;\n"
-"border-style: solid;")
+"border-style: solid;\n"
+"border-radius:12px;")
         self.listOfSteps.setObjectName("listOfSteps")
         self.stepsTitle = QtWidgets.QLabel(self.viewRecipeScreen)
         self.stepsTitle.setGeometry(QtCore.QRect(70, 280, 101, 41))
@@ -96,13 +98,14 @@ class Ui_ViewRecipeWindow(object):
         self.listOfIngredients.setStyleSheet("border-color: rgb(49, 87, 44);\n"
 "border-width: 2px;\n"
 "border-style: solid;\n"
-"")
+"border-radius:12px;")
         self.listOfIngredients.setObjectName("listOfIngredients")
         self.listOfTimers = QtWidgets.QListWidget(self.viewRecipeScreen)
         self.listOfTimers.setGeometry(QtCore.QRect(620, 650, 500, 220))
         self.listOfTimers.setStyleSheet("border-color: rgb(49, 87, 44);\n"
 "border-width: 2px;\n"
 "border-style: solid;\n"
+"border-radius:12px;\n"
 "")
         self.listOfTimers.setObjectName("listOfTimers")
         self.ingredientsTitle = QtWidgets.QLabel(self.viewRecipeScreen)
