@@ -1,10 +1,13 @@
 import sys
+from database.database_init import Session, engine
 
 from PyQt5 import QtWidgets
 
 from ui.recpie_window import Ui_recpie_window
 
 if __name__ == "__main__":
+    # database setup
+    local_session = Session(bind=engine)
     # for opening 'recipe screen'
     app = QtWidgets.QApplication(sys.argv)
     recpie_window = QtWidgets.QMainWindow()
