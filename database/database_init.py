@@ -38,12 +38,30 @@ class ShoppingList(Base):
 class Recipe(Base):
     __tablename__ = 'recipes'
     id = Column(Integer(), primary_key=True)
-    name = Column(String, nullable=False)
+    name = Column(String(), nullable=False)
     licks = Column(Integer(), nullable=False)
     image = Column(String(), nullable=False)
 
     def __repr__(self):
         return f"<Recipe: id={self.id}, name={self.name}, licks={self.licks}, image={self.image}>"
+
+
+class Step(Base):
+    __tablename__ = 'steps'
+    id = Column(Integer(), primary_key=True)
+    recipe_id = Column(Integer(), ForeignKey("recipes.id"), nullable=False)
+    recipe = relationship("Recipe", backref="steps")
+    number = Column(Integer(), nullable=False)
+    description = Column(String(), nullable=False)
+
+
+class Timer(Base):
+    __tablename__ = 'timers'
+    id = Column(Integer(), primary_key=True)
+    recipe_id = Column(Integer(), ForeignKey("recipes.id"), nullable=False)
+    recipe = relationship("Recipe", backref="timers")
+    name = Column(String(), nullable=False)
+    time_val = Column(Integer(), nullable=False)
 
 
 Base.metadata.create_all(engine)
