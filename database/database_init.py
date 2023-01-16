@@ -6,7 +6,7 @@ from sqlalchemy.orm import declarative_base, sessionmaker, relationship
 BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 connection_string = "sqlite:///" + os.path.join(BASE_DIR, 'app_database.db')
 Base = declarative_base()
-engine = create_engine(connection_string, echo=True)
+engine = create_engine(connection_string)  # Here add 'echo=True' if needed
 Session = sessionmaker()
 
 
@@ -54,6 +54,9 @@ class Step(Base):
     number = Column(Integer(), nullable=False)
     description = Column(String(), nullable=False)
 
+    def __repr__(self):
+        return f"<Step: id={self.id}, recipe_id={self.recipe_id}, number={self.number}, description={self.description}>"
+
 
 class Timer(Base):
     __tablename__ = 'timers'
@@ -62,6 +65,9 @@ class Timer(Base):
     recipe = relationship("Recipe", backref="timers")
     name = Column(String(), nullable=False)
     time_val = Column(Integer(), nullable=False)
+
+    def __repr__(self):
+        return f"<Timer: id={self.id}, recipe_id={self.recipe_id}, name={self.name}, time_val={self.time_val}>"
 
 
 Base.metadata.create_all(engine)
