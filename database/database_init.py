@@ -6,7 +6,7 @@ from sqlalchemy.orm import declarative_base, sessionmaker, relationship
 BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 connection_string = "sqlite:///" + os.path.join(BASE_DIR, 'app_database.db')
 Base = declarative_base()
-engine = create_engine(connection_string, echo=True)
+engine = create_engine(connection_string)  # Here add 'echo=True' if needed
 Session = sessionmaker()
 
 
@@ -38,12 +38,36 @@ class ShoppingList(Base):
 class Recipe(Base):
     __tablename__ = 'recipes'
     id = Column(Integer(), primary_key=True)
-    name = Column(String, nullable=False)
+    name = Column(String(), nullable=False)
     licks = Column(Integer(), nullable=False)
     image = Column(String(), nullable=False)
 
     def __repr__(self):
         return f"<Recipe: id={self.id}, name={self.name}, licks={self.licks}, image={self.image}>"
+
+
+class Step(Base):
+    __tablename__ = 'steps'
+    id = Column(Integer(), primary_key=True)
+    recipe_id = Column(Integer(), ForeignKey("recipes.id"), nullable=False)
+    recipe = relationship("Recipe", backref="steps")
+    number = Column(Integer(), nullable=False)
+    description = Column(String(), nullable=False)
+
+    def __repr__(self):
+        return f"<Step: id={self.id}, recipe_id={self.recipe_id}, number={self.number}, description={self.description}>"
+
+
+class Timer(Base):
+    __tablename__ = 'timers'
+    id = Column(Integer(), primary_key=True)
+    recipe_id = Column(Integer(), ForeignKey("recipes.id"), nullable=False)
+    recipe = relationship("Recipe", backref="timers")
+    name = Column(String(), nullable=False)
+    time_val = Column(Integer(), nullable=False)
+
+    def __repr__(self):
+        return f"<Timer: id={self.id}, recipe_id={self.recipe_id}, name={self.name}, time_val={self.time_val}>"
 
 
 Base.metadata.create_all(engine)
