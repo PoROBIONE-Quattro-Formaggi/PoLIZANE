@@ -1,4 +1,4 @@
-from database_test import Ingredient, Session, engine
+from database_init import Ingredient, Session, engine
 
 # generating some test values
 test_ingredient = Ingredient(name="test ingredient", unit="g", amount=1)

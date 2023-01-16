@@ -1,4 +1,4 @@
-from database_test import Session, engine, Ingredient
+from database_init import Session, engine, Ingredient
 from sqlalchemy import desc
 
 local_session = Session(bind=engine)
