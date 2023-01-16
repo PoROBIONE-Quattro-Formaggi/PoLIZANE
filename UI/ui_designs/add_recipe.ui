@@ -6,19 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
+    <width>1400</width>
     <height>1000</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>1200</width>
+    <width>1400</width>
     <height>1000</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1200</width>
+    <width>1400</width>
     <height>1000</height>
    </size>
   </property>
@@ -38,7 +38,7 @@
      <rect>
       <x>750</x>
       <y>40</y>
-      <width>241</width>
+      <width>361</width>
       <height>51</height>
      </rect>
     </property>
@@ -61,9 +61,9 @@
    <widget class="QPlainTextEdit" name="list_name">
     <property name="geometry">
      <rect>
-      <x>610</x>
+      <x>710</x>
       <y>110</y>
-      <width>520</width>
+      <width>620</width>
       <height>90</height>
      </rect>
     </property>
@@ -90,7 +90,7 @@ placeholder {
    <widget class="QPushButton" name="add_button_step">
     <property name="geometry">
      <rect>
-      <x>830</x>
+      <x>1030</x>
       <y>220</y>
       <width>300</width>
       <height>90</height>
@@ -122,7 +122,7 @@ border-width: 2px;</string>
      <rect>
       <x>70</x>
       <y>20</y>
-      <width>520</width>
+      <width>620</width>
       <height>221</height>
      </rect>
     </property>
@@ -173,9 +173,9 @@ border-color: rgb(49, 87, 44);</string>
    <widget class="QListWidget" name="steps_list">
     <property name="geometry">
      <rect>
-      <x>70</x>
+      <x>69</x>
       <y>330</y>
-      <width>1060</width>
+      <width>1261</width>
       <height>192</height>
      </rect>
     </property>
@@ -217,8 +217,8 @@ border-color: rgb(49, 87, 44);</string>
    <widget class="QLabel" name="timers_label">
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>580</y>
+      <x>710</x>
+      <y>570</y>
       <width>260</width>
       <height>50</height>
      </rect>
@@ -244,7 +244,7 @@ border-color: rgb(49, 87, 44);</string>
      <rect>
       <x>70</x>
       <y>660</y>
-      <width>520</width>
+      <width>620</width>
       <height>192</height>
      </rect>
     </property>
@@ -261,9 +261,9 @@ border-color: rgb(49, 87, 44);</string>
    <widget class="QListWidget" name="timers_list">
     <property name="geometry">
      <rect>
-      <x>610</x>
+      <x>710</x>
       <y>660</y>
-      <width>520</width>
+      <width>620</width>
       <height>192</height>
      </rect>
     </property>
@@ -280,7 +280,7 @@ border-color: rgb(49, 87, 44);</string>
    <widget class="QPushButton" name="add_button_ingredient">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>390</x>
       <y>550</y>
       <width>300</width>
       <height>90</height>
@@ -310,7 +310,7 @@ border-width: 2px;</string>
    <widget class="QPushButton" name="add_button_timer">
     <property name="geometry">
      <rect>
-      <x>830</x>
+      <x>1030</x>
       <y>550</y>
       <width>300</width>
       <height>90</height>
@@ -340,7 +340,7 @@ border-width: 2px;</string>
    <widget class="QPushButton" name="save_button">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>440</x>
       <y>870</y>
       <width>250</width>
       <height>80</height>
@@ -367,7 +367,7 @@ border-radius: 12px;</string>
    <widget class="QPushButton" name="delete_button">
     <property name="geometry">
      <rect>
-      <x>610</x>
+      <x>710</x>
       <y>870</y>
       <width>250</width>
       <height>80</height>
