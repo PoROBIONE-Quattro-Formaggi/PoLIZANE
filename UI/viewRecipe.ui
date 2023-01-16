@@ -186,7 +186,8 @@ border-radius: 12px;</string>
     <property name="styleSheet">
      <string notr="true">border-color: rgb(49, 87, 44);
 border-width: 2px;
-border-style: solid;</string>
+border-style: solid;
+border-radius:12px;</string>
     </property>
    </widget>
    <widget class="QLabel" name="stepsTitle">
@@ -227,7 +228,7 @@ border-style: solid;</string>
      <string notr="true">border-color: rgb(49, 87, 44);
 border-width: 2px;
 border-style: solid;
-</string>
+border-radius:12px;</string>
     </property>
    </widget>
    <widget class="QListWidget" name="listOfTimers">
@@ -243,6 +244,7 @@ border-style: solid;
      <string notr="true">border-color: rgb(49, 87, 44);
 border-width: 2px;
 border-style: solid;
+border-radius:12px;
 </string>
     </property>
    </widget>
