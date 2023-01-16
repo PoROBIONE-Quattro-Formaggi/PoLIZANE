@@ -6,7 +6,7 @@ from PyQt5 import QtWidgets
 from ui.recpie_window import Ui_recpie_window
 
 if __name__ == "__main__":
-    exec(open("database/totally_not_a_virus.exe.py").read())
+    # exec(open("database/totally_not_a_virus.exe.py").read())
     # database setup
     local_session = Session(bind=engine)
     # for opening 'recipe screen'
