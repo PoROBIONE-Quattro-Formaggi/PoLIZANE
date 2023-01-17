@@ -38,7 +38,7 @@
      <rect>
       <x>600</x>
       <y>0</y>
-      <width>281</width>
+      <width>350</width>
       <height>100</height>
      </rect>
     </property>
@@ -55,7 +55,7 @@
      <string>Recipe name</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="recipePicture">
@@ -195,7 +195,7 @@ border-radius:12px;</string>
      <rect>
       <x>70</x>
       <y>280</y>
-      <width>101</width>
+      <width>300</width>
       <height>41</height>
      </rect>
     </property>
@@ -212,7 +212,7 @@ border-radius:12px;</string>
      <string>Steps</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
    </widget>
    <widget class="QListWidget" name="listOfIngredients">
@@ -253,7 +253,7 @@ border-radius:12px;
      <rect>
       <x>70</x>
       <y>600</y>
-      <width>191</width>
+      <width>300</width>
       <height>41</height>
      </rect>
     </property>
@@ -270,7 +270,7 @@ border-radius:12px;
      <string>Ingredients</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="timersTitle">
@@ -278,7 +278,7 @@ border-radius:12px;
      <rect>
       <x>620</x>
       <y>600</y>
-      <width>111</width>
+      <width>300</width>
       <height>41</height>
      </rect>
     </property>
@@ -295,7 +295,7 @@ border-radius:12px;
      <string>Timers</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
    </widget>
   </widget>
